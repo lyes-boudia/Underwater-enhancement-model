@@ -47,3 +47,10 @@ Lyes, Boudia. 2025. Underwater-enhancement-model. Version 1.0. GitHub: https://g
 It is important to recognize that value doesn’t appear from nowhere. Behind every working piece of code is time, thought, experimentation, and refinement.
 
 This project is shared freely under an open license that requires attribution. That’s a minimal, fair ask in return for something that saves you time, effort, and cost.
+
+## License
+
+This repository is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You are free to use, modify, and share this code for **non-commercial purposes** with proper attribution.  
+Commercial use and redistribution are **not permitted**.
