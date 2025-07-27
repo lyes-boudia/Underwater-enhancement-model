@@ -26,7 +26,7 @@ Most works still rely on conventional preprocessing steps like resizing, croppin
 
 The majority of deep learning-based approaches published in the field of underwater image enhancement rely on resizing, cropping, or padding input images to fixed dimensions prior to processing. However, resizing introduces irreversible detail loss, distortion, and interpolation artifacts, which are especially detrimental in underwater imagery. This convention stems from architectural constraints of frameworks like PyTorch and TensorFlow that do not natively support batch processing of images with varying resolutions.
 
-This workaround highlights a broader constraint in standard deep learning ecosystems: variable-resolution batching is not supported by most mainstream frameworks, including PyTorch. Although PyTorch is the most widely adopted framework, it imposes a significant restriction by disallowing resolution diversity within batch-level trainin
+This workaround highlights a broader constraint in standard deep learning ecosystems: variable-resolution batching is not supported by most mainstream frameworks, including PyTorch. Although PyTorch is the most widely adopted framework, it imposes a significant restriction by disallowing resolution diversity within batch-level training
 
 ## Custom Approach
 
