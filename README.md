@@ -37,7 +37,7 @@ Since images vary in size and aspect ratio, the challenge is how to process all 
 Each image has its own unique resolution (height and width), and The goal of this dynamic downsampling strategy is to process images at their native resolution without resizing, cropping, 
 or padding prior to feeding them into the U-Net. A U-Net consists of successive encoder-decoder blocks that downsample and then upsample the image by factors of 2. 
 
-For instance, a compact 234×276 image might be processed through four encoder-decoder blocks, whereas a larger 1007×1347 image could pass through six. In the case of non-square images like 289×1123, the model can adapt by applying downsampling four blocks along its width dimension, but continue downsampling to six blocks along only its height dimension effectively supporting symetric and asymetric downsampling for different aspect ratio.
+For instance, a compact 234×276 image might be processed through four encoder-decoder blocks, whereas a larger 1007×1347 image could pass through six. In the case of non-square images like 289×1123, the model can adapt by applying downsampling four blocks along its width and height dimension, but continue downsampling to six blocks along only its height dimension effectively supporting symetric and asymetric downsampling for different aspect ratio.
 
 This results in significantly better preservation of fine details compared to fixed-resolution pipelines. 
 This allows the model to preserve fine-grained details of the input image, with the loss function comparing outputs directly to their corresponding native-resolution references
