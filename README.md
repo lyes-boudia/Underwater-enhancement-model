@@ -53,7 +53,7 @@ While it works within the constraints of existing deep learning frameworks, it a
 
 ## Details on Implementation
 
-For both **Single_Raw_Unet** and **Reference_Guided_Unet**, the `UnderwaterUnet` class as well as the loss function used accross the models is partially based on my own interpretation and implementation of the paper:
+For both **Single_Raw_Unet** and **Reference_Guided_Unet**, the `UnderwaterUnet` class as well as the loss function used across the models is partially based on my own interpretation and implementation of the paper:
 
 > *Underwater Color Restoration Using U-Net Denoising Autoencoder*  
 > (https://arxiv.org/pdf/1905.09000.pdf)  
