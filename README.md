@@ -5,6 +5,23 @@ Classical Methods for Underwater Images Enhancement**, proposed and supervised b
 
 It includes three **UNet-based architectures** for underwater image enhancement, each implemented as a Jupyter Notebook. These notebooks are designed to be easy to follow and work in most environments and operating systems.
 
+In recent years, deep learning-based techniques have been widely explored for underwater image enhancement. However, their effectiveness is often limited due to the lack of sufficient training data and conventional architectural design used in most research.
+
+In contrast, classical image enhancement methods frequently outperform neural networks for specific underwater image types, While each method excels under certain
+aquatic conditions, no single classical approach works universally well across all cases.
+
+This work aims to leverage the strengths of both classical and deep learning approaches by exploring a hybrid method for underwater image enhancement that is both effective and data-efficient.
+
+the three stages of this work are as follow:
+
+**Stage 1:** an analysis of the Underwater Image Enhancement Benchmark (UIEB) dataset through reverse engineering, this first stage aim to identify which classical method used to generate each image reference provided in the UIEB dataset. To do this for each raw image, we compare the reference images in the UIEB dataset with outputs from various classical enhancement techniques reported in the UIEB paper. This helps infer which methods were likely used or best approximate the references, using both similarity metrics (SSIM, MSE, L1, and PSNR) and visual inspection.
+
+**stage 2:** after identifying the classical enhancement method used to generate each reference image in the UIEB dataset, we train a classification network to predict the most suitable classical algorithm for any given raw underwater image. This classifier can then be applied to expand the dataset by automatically selecting optimal enhancement methods for images outside UIEB, this adress the first key challenge: the lack of training data for underwater image enhancement deep learning models
+
+**stage 3:** the classifier's predicted outputs serve as reference images for the three U-Net models implemented in this repository, these U-NETs are trained to enhance raw underwater images, The goal is to develop deep learning models capable of producing superior underwater image quality.
+the classifier used in this task achieved 60% accuracy, even when misclassifications occur, the resulting outputs are not necessarily of lower quality. In some cases, the classifier's predicted method produces visually superior results compared to the original UIEB reference, this assessment remains subjective opinion. The high inter class visual similarity among classical enhancement methods makes some misclassifications perceptually insignificant, and the impact on the three models is relative for several reasons that will be discussed in each notebook
+
+
 The U-Net architecture has proven especially effective for this task thanks to its symmetric encoder-decoder structure and skip connections, which preserve spatial information while facilitating deep contextual learning. 
 This unique architecture enables the reconstruction of fine-grained details while maintaining a large receptive field, making U-Net ideally suited for underwater image enhancement.
 
